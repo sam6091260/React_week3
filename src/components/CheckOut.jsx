@@ -30,13 +30,16 @@ function CheckOut({ token, setToken }) {
       {/* <label htmlFor="Authorization">Token</label> */}
       <input
         // value={token}
+        className="form-control"
         id="Authorization"
         onChange={(e) => {
           setToken(e.target.value);
         }}
         placeholder="Token"
       />
-      <button onClick={checkOut}>Check Out</button>
+      <button onClick={checkOut} className="fw-bold btn btn-primary mt-4">
+        Check Out
+      </button>
       <p>{message}</p>
     </>
   );

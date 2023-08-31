@@ -31,32 +31,44 @@ function SignUp() {
   return (
     <>
       <h2>註冊</h2>
-      <label htmlFor="email">信箱</label>
+      <label htmlFor="email" className="fw-bold fs-5">
+        信箱
+      </label>
       <input
+        className="form-control"
         id="email"
         value={form.email}
         name="email"
         onChange={handleInput}
-        placeholder="Email"
+        placeholder="請輸入信箱"
       />
-      <label htmlFor="password">密碼</label>
+      <label htmlFor="password" className="fw-bold fs-5">
+        密碼
+      </label>
       <input
+        className="form-control"
         id="password"
         value={form.password}
         name="password"
         onChange={handleInput}
-        placeholder="Password"
+        placeholder="請輸入密碼"
       />
-      <label htmlFor="nickname">暱稱</label>
+      <label htmlFor="nickname" className="fw-bold fs-5">
+        暱稱
+      </label>
       <input
+        className="form-control"
         id="nickname"
         type="text"
         value={form.nickname}
         name="nickname"
         onChange={handleInput}
-        placeholder="Nickname"
+        placeholder="請輸入暱稱"
       />
-      <button onClick={signUp}> Sign Up </button>
+      <button onClick={signUp} className="fw-bold btn btn-primary mt-4">
+        {" "}
+        Sign Up{" "}
+      </button>
       <p>{message}</p>
     </>
   );

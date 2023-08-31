@@ -27,13 +27,17 @@ function SignOut() {
     <>
       <h2>登出</h2>
       <input
+        className="form-control"
         value={token}
         onChange={(e) => {
           setToken(e.target.value);
         }}
         placeholder="Token"
       />
-      <button onClick={signOut}>Sign Out</button>
+      <button onClick={signOut} className="fw-bold btn btn-primary mt-4">
+        Sign Out
+      </button>
+      <p>{token}</p>
     </>
   );
 }

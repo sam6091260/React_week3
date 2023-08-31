@@ -17,12 +17,25 @@ function App() {
     }
   }, []);
   return (
-    <div className="container">
-      <SignUp />
-      <SignIn token={token} setToken={setToken} />
-      <CheckOut token={token} setToken={setToken} />
-      <SignOut />
+    <div className="container bg-yellow row">
+      <div className="col-5">
+        {" "}
+        <SignUp />
+      </div>
+      <div className="col-5">
+        {" "}
+        <SignIn token={token} setToken={setToken} />
+      </div>
+      <div className="col-5">
+        {" "}
+        <CheckOut token={token} setToken={setToken} />
+      </div>
+      <div className="col-5">
+        <SignOut />
+      </div>
+
       <hr />
+
       <h2>Todo list</h2>
       {token && <TodoList token={token} />}
     </div>
