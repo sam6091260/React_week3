@@ -1,15 +1,21 @@
 import { useState } from "react";
 import axios from "axios";
 
-function SignOut() {
-  const urlApi = "https://todolist-api.hexschool.io";
+const { VITE_APP_HOST } = import.meta.env;
 
+function SignOut() {
   const [token, setToken] = useState("");
 
   const signOut = async () => {
     try {
+      // 清除本地存储的 token
+      localStorage.removeItem("hexschoolTodoToken");
+
+      // 重置 token 状态
+      setToken("");
+
       const res = await axios.post(
-        `${urlApi}/users/sign_out`,
+        `${VITE_APP_HOST}/users/sign_out`,
         {},
         {
           headers: {
@@ -24,21 +30,25 @@ function SignOut() {
   };
 
   return (
-    <>
-      <h2>登出</h2>
+    <div className="mt-5 col-5">
+      <h2 className="fw-bold">登出</h2>
       <input
-        className="form-control"
+        className="form-control mt-1"
         value={token}
         onChange={(e) => {
           setToken(e.target.value);
         }}
         placeholder="Token"
       />
-      <button onClick={signOut} className="fw-bold btn btn-primary mt-4">
+      <button
+        type="button"
+        onClick={signOut}
+        className="fw-bold btn btn-dark mt-4"
+      >
         Sign Out
       </button>
       <p>{token}</p>
-    </>
+    </div>
   );
 }
 

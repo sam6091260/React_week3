@@ -1,43 +1,49 @@
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
-import CheckOut from "./components/CheckOut";
+// import CheckOut from "./components/CheckOut";
 import { useEffect, useState } from "react";
 import SignOut from "./components/SignOut";
 import TodoList from "./components/TodoList";
+import { Route, Routes, NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./style/style.css";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [token, setToken] = useState("");
   const TodoToken = document.cookie
     .split("; ")
-    .find((row) => row.startsWith("hexschoolTodo="))
+    .find((row) => row.startsWith("Todo="))
     ?.split("=")[1];
   useEffect(() => {
     if (TodoToken) {
       setToken(TodoToken);
     }
-  }, []);
+  }, [token]);
+
+  // const style = ({ isActive }) => {
+  //   return {
+  //     color: isActive && "#ff6e02",
+  //   };
+  // };
+
   return (
-    <div className="container bg-yellow row">
-      <div className="col-5">
-        {" "}
-        <SignUp />
-      </div>
-      <div className="col-5">
-        {" "}
-        <SignIn token={token} setToken={setToken} />
-      </div>
-      <div className="col-5">
-        {" "}
-        <CheckOut token={token} setToken={setToken} />
-      </div>
-      <div className="col-5">
-        <SignOut />
-      </div>
+    <div>
+      <Routes>
+        <Route
+          path="/"
+          element={<SignIn token={token} setToken={setToken} />}
+        ></Route>
 
-      <hr />
+        <Route path="/logout" element={<SignOut />}></Route>
 
-      <h2>Todo list</h2>
-      {token && <TodoList token={token} />}
+        <Route
+          path="/todo"
+          element={<div>{token && <TodoList token={token} />}</div>}
+        ></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
     </div>
   );
 }

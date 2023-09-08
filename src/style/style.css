@@ -27,6 +27,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+  font-family: "Noto Sans TC";
+  background-color: #FFD370;
   line-height: 1;
 }
 
@@ -40,7 +42,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -57,12 +59,12 @@ table {
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .selector-for-some-widget {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 html {
@@ -88,10 +90,6 @@ img {
   height: 100vh;
 }
 
-.bg-yellow {
-  background-color: #FFD370;
-}
-
 .bg-half {
   background-image: linear-gradient(175deg, #FFD370 60%, #fff 40%);
 }
@@ -106,19 +104,18 @@ img {
     padding: 18px 32px;
   }
 }
-
 .side {
+  margin-bottom: 24px;
   width: 386px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
 }
 
 @media (max-width: 576px) {
@@ -126,14 +123,13 @@ img {
     width: 100%;
   }
 }
-
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 24px 32px 0 32px;
 }
 
@@ -142,7 +138,6 @@ nav {
     margin-bottom: 16px;
   }
 }
-
 nav h1 a {
   width: 243px;
   height: 39px;
@@ -165,7 +160,6 @@ nav ul {
     margin-top: 11px;
   }
 }
-
 nav ul a {
   text-decoration: none;
   color: #333333;
@@ -177,7 +171,6 @@ nav ul a {
     margin-left: 0;
   }
 }
-
 nav ul a:hover {
   color: #d87355;
 }
@@ -191,13 +184,11 @@ nav ul a span {
     display: none;
   }
 }
-
 @media (max-width: 576px) {
   .d-m-n {
     display: none;
   }
 }
-
 .formControls {
   margin-left: 100px;
   display: -webkit-box;
@@ -205,8 +196,8 @@ nav ul a span {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 @media (max-width: 576px) {
@@ -214,7 +205,6 @@ nav ul a span {
     margin-left: 0;
   }
 }
-
 .formControls .formControls_txt {
   font-size: 1.5rem;
   font-weight: bold;
@@ -227,7 +217,6 @@ nav ul a span {
     text-align: center;
   }
 }
-
 .formControls .formControls_label {
   font-size: 0.875rem;
   font-weight: bold;
@@ -271,8 +260,8 @@ nav ul a span {
   background: #333333;
   color: #fff;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   margin: 24px 0;
   font-weight: bold;
   cursor: pointer;
@@ -303,11 +292,11 @@ nav ul a span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 800px;
 }
 
@@ -316,26 +305,25 @@ nav ul a span {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin: 0 auto;
     padding: 48px 31px;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 }
-
 .signUpPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 800px;
 }
 
@@ -344,15 +332,17 @@ nav ul a span {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin: 48px auto 0 auto;
     padding: 48px 31px;
   }
 }
-
 .todoListPage {
   padding: 16px 32px;
+}
+.todoListPage a {
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {
@@ -360,7 +350,6 @@ nav ul a span {
     background-image: linear-gradient(175deg, #FFD370 100%, #fff 0%);
   }
 }
-
 .todoList_Content {
   width: 500px;
   margin: 0 auto;
@@ -371,7 +360,6 @@ nav ul a span {
     width: 100%;
   }
 }
-
 .inputBox {
   width: 100%;
   display: -webkit-box;
@@ -379,8 +367,9 @@ nav ul a span {
   display: flex;
   position: relative;
   margin-bottom: 16px;
+  margin-top: 100px;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .inputBox input {
@@ -414,7 +403,7 @@ nav ul a span {
   background: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .todoList_list .todoList_tab {
@@ -422,8 +411,8 @@ nav ul a span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .todoList_list .todoList_tab li {
@@ -463,8 +452,8 @@ nav ul a span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 15px;
   color: #333333;
@@ -491,8 +480,8 @@ nav ul a span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 17px;
 }
 
@@ -513,8 +502,8 @@ nav ul a span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .todoList_list .todoList_statistics p {
@@ -527,4 +516,5 @@ nav ul a span {
   font-size: 0.875rem;
   text-decoration: none;
 }
-/*# sourceMappingURL=all.css.map */
+
+/*# sourceMappingURL=style.css.map */
